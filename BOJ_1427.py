@@ -5,6 +5,3 @@ for i in range(9, -1, -1):
     for j in num:
         if i == j:
             print(j, end='')
-        
-    if count == len(num):
-        break
