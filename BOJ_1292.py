@@ -4,7 +4,7 @@ def sum_sequence(N): # N번째 자리수까지의 수열의 합을 구하는 함
     sum_result = 0
     sequence_num = 1 # 1씩 증가시킬 수열, 초기값 = 1
     while N > 0:
-        for _ in range(sequence_num): #  '1'은 1번 반복, 2'는 2번반복, 3'은 3번 반복....
+        for _ in range(sequence_num): #  '1'은 1번 반복, 2'는 2번 반복, 3'은 3번 반복....
             sum_result += sequence_num
             N -= 1
             if N == 0:
@@ -13,6 +13,5 @@ def sum_sequence(N): # N번째 자리수까지의 수열의 합을 구하는 함
     return sum_result
 
 
-a, b = map(int, input().split())
-print(sum_sequence(b) - sum_sequence(a-1))  # a와 b사이의 수열의 합을 sum(a, b)라고 한다면
-                                            # sum(a, b) = sum(1, b) - sum(1, a-1)
+a, b = map(int, input().split())            # a와 b사이의 수열의 합을 sum(a, b)라고 한다면
+print(sum_sequence(b) - sum_sequence(a-1))  # sum(a, b) = sum(1, b) - sum(1, a-1)
