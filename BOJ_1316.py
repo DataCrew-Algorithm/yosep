@@ -4,7 +4,7 @@ count = 0
 for _ in range(N):
     text = input()
     for i in range(len(text)):
-        if text.find(text[i], i+1, len(text)) - i > 1:  # find를 사용하여 index의 차이가 1이상이면,
+        if text.find(text[i], i+1, len(text)) - i > 1:  # find를 사용하여 index의 차이가 1보다 크면,
             count += 1                                  # 다시말해 같은 문자가 연속되지 않은 위치에서 발견되면 count + 1
-            break
+            break                                       # 추가설명 : text.find('a', 시작, 끝)
 print(N-count)
