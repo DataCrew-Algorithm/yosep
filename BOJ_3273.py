@@ -5,14 +5,13 @@ n = int(input())                                # n = 9
 sequence = list(map(int, input().split(' ')))   # sequence = [5, 12, 7, 10, 9, 1, 2, 3, 11]
 x = int(input())  # a1 + a2                     # x = 13
 
-i, j, count = 0, 1, 0
-while i != n:
+i, j, count = 0, 1, 0   # 초기값으로 i, j 각각 index 0번과 1번자리
+while i != n:           # nC2 구현 반복문
     if j == n:
         i += 1
         j = i+1
-        continue
     elif sequence[i] + sequence[j] == x:
-        count += 1
+        count += 1      #  조합의 합이 x이면 count + 1
         j += 1
     else:
         j += 1
@@ -23,17 +22,15 @@ from itertools import combinations
 
 n = int(input())
 sequence = list(map(int, input().split(' ')))
-x = int(input())  # a1 + a2
+x = int(input()) 
 combi_list = list(combinations(sequence, 2))
 
 count = 0
 for i in combi_list:
-    if sum(i) == 13:
+    if sum(i) == x:
         count += 1
-    else:
-        continue
 print(count)
 
-# 힌트 
-# 포인터
-# 공부하자
+# 힌트 : 투 포인터
+# 그 외 풀이 : 수학적 접근
+# 결론 >>> 수학은 대단하다...
