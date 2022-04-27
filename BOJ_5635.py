@@ -10,11 +10,11 @@ def get_key(dic, val):
          if val == value:
                  return key
 
-# 딕셔너리 생성 { 이름 : 생년월일 }
+# 딕셔너리 생성 { '이름' : '생년월일' }
 info = {}
 for i in range(int(input())):   # 'James 1 1 1991'
     tmp = input().split()       # ['James', '1', '1', '1991']
-    info[tmp[0]] = tmp[3] + tmp[2].zfill(2) + tmp[1].zfill(2) # {'James':19910101}
+    info[tmp[0]] = tmp[3] + tmp[2].zfill(2) + tmp[1].zfill(2) # {'James':'19910101'}
     # info['James'] = '1991' + '01' + '01'
 
 print(get_key(info, max(info.values()))) # 가장 어린 사람
