@@ -8,9 +8,9 @@ def largest_gap(list):
     return max(tmp)
 
 for i in range(int(input())): # 교실 수 만큼 반복
-    tmp = list(map(int, input().split()))[1:] # 학생 수(index[0])을 제외하여 리스트에 저장 [5 30 25 76 23 78] -> [30 25 76 23 78]
-    tmp.sort() # 점수 정렬
-    print(f'Class {i+1}\nMax {tmp[-1]}, Min {tmp[0]}, Largest gap {largest_gap(tmp)}')
+    students = list(map(int, input().split()))[1:] # 학생 수(index[0])을 제외하여 리스트에 저장 [5 30 25 76 23 78] -> [30 25 76 23 78]
+    students.sort() # 점수 정렬
+    print(f'Class {i+1}\nMax {students[-1]}, Min {students[0]}, Largest gap {largest_gap(students)}')
 
 # ex) input
 # 2
