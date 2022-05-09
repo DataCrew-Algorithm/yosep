@@ -69,8 +69,11 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         nums_dict = {}
         for num in nums:
-            nums_dict[nums] = nums.index(num)
-        print(nums_dict)
+            nums_dict[num] = nums.index(num)
+        
+        for num in nums_dict:
+            if target-num in nums_dict and nums_dict[num] != nums_dict[target-num]:
+                return [nums_dict[num], nums_dict[target-num]]
 sol = Solution()
 print(sol.twoSum(nums, target))
 
