@@ -6,7 +6,6 @@ def solution(sentence):
     # >>> 1. <problem>17413<is hardest>problem ever<end>
     # >>> 2. *<problem>*17413*<is hardest>*problem ever*<end>*
     # >>> 3. ['', '<problem>', '17413', '<is hardest>', 'problem ever', '<end>', '']
-
     result = ''
     for word in sentence:
         if len(word) == 0:  # split으로 생성된 불필요한 공백 무시
@@ -16,6 +15,7 @@ def solution(sentence):
         else:               # 태그를 제외한 문장은 sub함수 적용
             result += reverse_sentence(word) # 
     return result
+
 
 # sub 함수
 def reverse_sentence(sentence):
