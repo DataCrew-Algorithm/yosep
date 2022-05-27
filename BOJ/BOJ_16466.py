@@ -6,10 +6,10 @@ N = int(input())
 sold_tickets = deque(sorted(list(map(int, input().split())))) # 판매된 티켓을 순서대로 정렬
 min_ticket = 1  # 비교할 티켓 초기값 지정
 while True:
-    if min_ticket != sold_tickets[0]:   # sold_tickets이 연속되는 값이면 ex) [1, 2, 3]
-        print(min_ticket)               # popleft()에 의해 결국엔 sold_tickets = []이 되고
-        break                           # if문의 sold_tickets[0]에서 인덱스 에러 발생
-    sold_tickets.popleft()
+    if min_ticket != sold_tickets[0]:   # 에러 원인
+        print(min_ticket)               # sold_tickets이 연속되는 값이면 ex) [1, 2, 3]
+        break                           # popleft()에 의해 결국엔 sold_tickets = []이 되고
+    sold_tickets.popleft()              # if문의 sold_tickets[0]에서 인덱스 에러 발생
     min_ticket += 1
                             
 
