@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # import numpy as np
 # # 11403 경로 찾기
 # N = int(input())
@@ -37,17 +38,34 @@ N = int(input())
 graph = [list(input()) for _ in range(N)]
 visit = [[0]*N for _ in range(N)]
 
+=======
+# 1058 친구
+
+N = int(input())
+graph = [list(input()) for _ in range(N)]
+visit = [[0]*N for _ in range(N)]
+
+# 플로이드–워셜 알고리즘
+>>>>>>> 31bf4ca7ca4b13193808be76937252b0af22070b
 for k in range(N):
     for i in range(N):
         for j in range(N):
             if i == j: continue
+<<<<<<< HEAD
 
+=======
+>>>>>>> 31bf4ca7ca4b13193808be76937252b0af22070b
             if graph[i][j]=='Y' or (graph[i][k]=='Y' and graph[k][j]=='Y'):
                 visit[i][j] = 1
 
 result = 0
+<<<<<<< HEAD
 
 for i in visit:
     result = max(result, sum(i))
 
+=======
+for i in visit:
+    result = max(result, sum(i))
+>>>>>>> 31bf4ca7ca4b13193808be76937252b0af22070b
 print(result)
